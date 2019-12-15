@@ -1,0 +1,34 @@
+form{
+    border:6px solid #fc8019;
+    border-radius:20px;
+    margin-top:80px;
+    width:50vw;
+    margin-left: 300px;
+}
+label{
+    margin-top:50px;
+    margin-left:50px;
+}
+h2{
+    margin:0px;
+    background-color: #fc8019;
+    text-align: center;
+    padding:10px;
+    /* height:10vh; */
+}
+.x{
+    background-color: #fc8019;
+    border: 1px solid lightblue;
+    color:black;
+    margin-left: 90px;
+    margin-bottom: 40px;
+}
+.submit{
+    background-color: #fc8019;
+    color: black;
+    margin: 0px 0px 40px 250px;
+    height: 50px;
+    width: 130px;
+    font-size: 26px;
+
+}

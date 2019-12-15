@@ -3,7 +3,6 @@ img {
     height:20vw;
     border-radius:30px 30px 30px 30px;
     border:3px;
-    /* margin:40px; */
     padding: 10px;
     margin:auto;
     margin-right: 0cm;
@@ -26,20 +25,11 @@ img {
 }
 .y{
     background-color:lightblue;
-    /* border: 1px solid lightblue; */
     color:blue;
     margin-right: 30px;
     margin-left: 30px;
 }
-.submit{
-    background-color: lightblue;
-    margin-left: 140px;
-    color:blue;
-}
-.navbar{
-    border-bottom:1px solid blue;
-    box-shadow: blue;
-}
+
 .form-container{
     margin-top:40px;
     padding: 30px;
@@ -56,4 +46,64 @@ img {
 h3{
     margin-left:80px;
     color:blue;
+}
+.log-out{
+    background-color: blanchedalmond;
+    color: black;
+    margin: 10px 0px 10px 1200px;
+    font-size: 20px;
+    border-radius: 20px;
+    display: flex;
+    /* border: 2px solid green; */
+}
+.navbar-brand{
+    color: #fc8019;
+    font-family: Arial,Helvetica Neue,sans-serif;
+    font-size: 35px;
+    line-height: 1.2;
+    letter-spacing: -.5px;
+    font-weight: 900;
+
+}
+a {
+    color: darkred;
+    font-weight: 900;
+    font-size: px;
+  }
+  a:visited {
+    color:darkred;
+    font-weight: 900;
+
+  }
+  a:hover, a:active, a:focus {
+    color:#c33;
+    font-weight: 400;
+  }
+  .home{
+    color: #fc8019;
+    font-family: Arial,Helvetica Neue,sans-serif;
+    font-size: 35px;
+    line-height: 1.2;
+    letter-spacing: -.5px;
+  }
+  .mat-card{
+    color:black;
+    border: 2px solid #fc8019 ;
+    width: 50%;
+    margin-left:500px;
+    margin-bottom: 50px;
+    padding: 50px;
+    
+}
+.mat-center{
+    margin-left: 10px;
+    margin-right: auto;
+}
+.submit{
+    background-color:black;
+    color: #fc8019;
+    height: 50px;
+    width: 130px;
+    font-size: 26px;
+
 }

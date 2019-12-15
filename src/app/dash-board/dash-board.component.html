@@ -1,26 +1,26 @@
-
-<nav class="navbar navbar-expand-lg" style="background-color:dimgrey;">
-        <a class="navbar-brand" href="#">Zomato</a>
+<nav class="navbar navbar-expand-lg" style="background-color:#fc8019;">
+    <a class="navbar-brand" href="#">Zomato</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <button (click)="logout()">Log Out</button>
+        <li class="log-out nav-item">
+          <!-- <button (click)="logout()">Log Out</button> -->
+          <button (click)="logout()" type="submit" class="submit" mat-button><strong>Log out</strong></button>     
+
         </li> 
       </ul>
     </div>
-</nav>
-<div >
-<div >
-<mat-card  *ngFor = "let entry of rest_list | paginate:{itemsPerPage: 2, currentPage:p}; ">
-    <img mat-card-image class="img_card" src="{{entry.image_url}}" alt="Loading for{{entry.name}}">
-    <mat-card-title>{{entry.name}}</mat-card-title>
-</mat-card>
-</div>
-<pagination-controls (pageChange)="p=$event"></pagination-controls>
+</nav> <!-- Navbar Ends -->
+<div>
+  <div>   
+    <mat-card  *ngFor = "let entry of rest_list | paginate:{itemsPerPage: 2, currentPage:p};" class="card">
+      <div>
+        <img mat-card-image src="{{entry.image_url}}" class="mat-center" alt="Loading for{{entry.name}}">
+    </div>
+    <mat-card-title class="mat-center">{{entry.name}}</mat-card-title>
+    </mat-card>
+  </div>
+  <pagination-controls (pageChange)="p=$event"></pagination-controls>
 </div>
