@@ -135,7 +135,7 @@ margin-left: 0;
     text-decoration: none;
 }
 .footer-wrapper {
-    background:  #fc8019;
+    /* background: black; */
     color: black;
   }
   .social-container {
@@ -273,6 +273,43 @@ margin-left: 0;
     margin-left: 10px;
     margin-right: auto;
     /* margin-top: 100px; */
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #fc8019;
+  }
+  
+  /* Footer Description */
+  @import 'https://fonts.googleapis.com/css?family=Indie+Flower';
+.devunit {
+  font-family: 'Indie Flower', cursive;
+  /* color: white; */
+  color:#1da1f2;
+  font-weight: 900;
+  word-spacing: 8px;
+
+}
+.love {
+  display: inline-block;
+  position: relative;
+  top: .2em;
+  font-size: 1.4em;
+  color: #e74c3c;
+  -webkit-transform: scale(.9);
+  -moz-transform: scale(.9);
+  transform: scale(.9);
+  -webkit-animation: love .5s infinite linear alternate-reverse;
+  -moz-animation: love .5s infinite linear alternate-reverse;
+  animation: love .5s infinite linear alternate-reverse;
+}
+@-webkit-keyframes love {
+  to {-webkit-transform: scale(1.2);}
+}
+@-moz-keyframes love {
+  to {-moz-transform: scale(1.2);}
+}
+@keyframes love {
+  to {transform: scale(1.2);}
 }
 
 
