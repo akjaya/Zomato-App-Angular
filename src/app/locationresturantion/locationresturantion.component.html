@@ -1,54 +1,121 @@
-<nav class="navbar navbar-dark bg-dark " >
-    <a class="navbar-brand" href="#"><b>Zomato</b></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <!-- <span class="navbar-toggler-icon"></span> -->
 
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
+<div class="jumbotron" style="background-color: white;">
+    <!-- First Section Main -->
+  <div class="row">
+    <div class="col-md-6 first">
+
+      <nav class="navbar  ">
+        <a class="navbar-brand" href="#"><b>Zomato</b></a> 
+          <div>
+            <form class="location_entry" [formGroup]="location_entry" (ngSubmit)="locationSubmit()">
+              <button routerLink="login" class="aa btn btn-outline-success my-2 my-sm-0"> Log In </button>
+              <button routerLink="signup" class="aa btn btn-outline-success my-2 my-sm-0"> Register </button>
+            </form>
+          </div>
+      </nav>
+
+      <div class="row">
+          <div class="col-md-2"></div>
+          <h1 class="main-heading text-center">Craving for your favourite food?</h1>
+          <h2 class="sub-heading text-center">Order from your favourite restaurant.</h2>
+          <div class=" search-box col-md-8">
+            <form class="location_entry" [formGroup]="location_entry" (ngSubmit)="locationSubmit()">
+              <input class="search-item" type="text"  matInput [formControl]="location" placeholder="Type the search city" color= "black">
+                    <div *ngIf="location.invalid && (location.dirty || location.touched)" class="alert alert-danger">
+              <div *ngIf="location.errors.required">
+                  Location is required.
+              </div>
+              </div>
+              <button style="margin-top: 50px;" class=" search-button btn btn-outline-success my-2 my-sm-0" type="submit"  [disabled]='!location_entry.valid' mat-raised-button color="primary">Search</button> 
+          </form>
+          </div>
+          <div class="col-md-2"></div>
+      </div>
+
+    </div><!-- Ends of first column -->
+
+
+    <div class="col-md-6 second" style="background-color: white;"> 
+      <div class="thumbnail" style="background-color: white;">
+        <a href="https://2f5s2b1gp3wv2nryrv219y65-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/Cover.jpg">
+          <img src="https://2f5s2b1gp3wv2nryrv219y65-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/Cover.jpg" alt="Lights" style="width:100%">
+          <div class="caption" style="background-color: white;">
+          </div>
+        </a>
+      </div>
+    </div><!-- Ends of second column -->
+
+  </div> <!-- Ends of first row -->
+
+
+ </div> <!-- Ends of jumbotron-->
+
+ <div class="row">
+  <div class="col-md-4">
+    <div class="thumbnail-end">
+      <a href="/w3images/lights.jpg" target="_blank">
+        <img src="https://www.dineout.co.in/blog/wp-content/uploads/2019/10/Blog-10-1030x538.jpg" alt="Lights" style="width:100%">
+        <div class="caption">
+          <h2>Indian Food</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail-end">
+      <a href="/w3images/nature.jpg" target="_blank">
+        <img src="https://travelfoodatlas.com/wp-content/uploads/2018/02/Italian-food.jpeg" alt="Nature" style="width:100%">
+        <div class="caption">
+          <h2>Italian Food</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail-end">
+      <a href="/w3images/fjords.jpg" target="_blank">
+        <img src="https://prods3.imgix.net/images/articles/2017_05/nonfeatured-traditional-mexican-foods.jpg?auto=format%2Ccompress&ixjsv=2.2.3&w=750" alt="Fjords" style="width:100%">
+        <div class="caption">
+          <h2>Mexican Food</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+  <!-- Displaying in mat card -->
+    <div class="card">
+      <mat-card  *ngFor="let entry of resturant_inforarray | paginate: { itemsPerPage: 2, currentPage: p }">
+        <div>
+          <img mat-card-image src="{{ entry.image_url }}" alt="Loading for{{ entry.name }}" />
+        </div>
+        <mat-card-title>{{ entry.name }}</mat-card-title>
+        <button  mat-icon-button (click)="click_fav(entry.id)" data-toggle="popover"  title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
+          <mat-icon>favorite</mat-icon> <b>Add to favorites</b>
+        </button>
+      </mat-card>
+    </div>
+    <!-- Displaying in mat card  ends-->
+
+   <!-- Footer -->
+   <div class="footer-wrapper">
+    <section class="contact-container">
+      <h2 id="contact" class="contact-title">Zomato</h2>
+      <div class="social-container">
+        <ul class="social-icons">
+            <li><a href="https://twitter.com/abhi5h1d" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a id="profile-link" href="https://github.com/abhi1d" target="_blank"><i class="fa fa-github"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-codepen"></i></a></li>
+            <li><a href="https://www.instagram.com/abhi5h1d" target="_blank"><i class="fa fa-instagram"></i></a></li>
         </ul>
     </div>
-    <div>
-      <form class="location_entry" [formGroup]="location_entry" (ngSubmit)="locationSubmit()">
-          <input type="text"  matInput [formControl]="location" placeholder="Type the search city" color= "black">
-                <div *ngIf="location.invalid && (location.dirty || location.touched)" class="alert alert-danger">
-          <div *ngIf="location.errors.required">
-              Location is required.
-          </div>
-          </div>
-          <button class="aa btn btn-outline-success my-2 my-sm-0" type="submit"  [disabled]='!location_entry.valid' mat-raised-button color="primary">Search</button> 
-        <button routerLink="login" class="aa btn btn-outline-success my-2 my-sm-0">Log In</button>
-        <button routerLink="signup" class="aa btn btn-outline-success my-2 my-sm-0">Register</button>
-        <!-- <button routerLink="logout" class="aa btn btn-outline-success my-2 my-sm-0">Log Out</button> -->
-      </form>
-    </div>
-  </nav>
-  <div>
-    <div>
-        <mat-card *ngFor = "let entry of resturant_inforarray| paginate:{itemsPerPage: 2, currentPage:p};">
-            
-            
-            <div>
-               <img mat-card-image src="{{entry.image_url}}" alt="Loading for{{entry.name}}">
-            </div>
-
-                 <mat-card-title>{{entry.name}}</mat-card-title>
-    
-            <button mat-icon-button (click)="click_fav(entry.id)" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
-                              <mat-icon>favorite</mat-icon> <b>Add to favorites</b>
-            </button>
-            
-            
-        </mat-card>
-        </div>
-        <pagination-controls (pageChange)="p=$event"></pagination-controls>
-        </div>
+    </section>
+    </div> <!-- End of footer -->
 
 
+
+             
+       
 
 
 
