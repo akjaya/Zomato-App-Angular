@@ -1,0 +1,133 @@
+<div >
+    <h1 >Welcome to Zomato Family!</h1>
+ <div >
+<form [formGroup]="profileForm" (ngSubmit)="loginSubmit()">
+    <div>
+    <label>
+      First Name<input type="text" [formControl]="firstName">
+      <div *ngIf="firstName.invalid && (firstName.dirty ||
+      firstName.touched)"
+          class="alert alert-danger">
+      <div *ngIf="firstName.errors.required">
+         First name is required.
+      </div>
+      <div *ngIf="firstName.errors.minlength">
+              Name must be at least 2 characters long.
+      </div>
+     </div>
+    </label>
+    <br>
+    <br>
+    <label>
+      Last Name<input type="text" [formControl]="lastName">
+      <div *ngIf="lastName.invalid && (lastName.dirty ||
+      firstName.touched)"
+          class="alert alert-danger">
+      <div *ngIf="lastName.errors.required">
+         Last name is required.
+      </div>
+     </div>
+    </label>
+    </div>
+    <h3>Address</h3>
+    <div>
+      
+    
+      <!-- <label>
+        Street <input type="text" [formControl]="street">
+        <div *ngIf="street.invalid && (street.dirty ||
+        street.touched)"
+            class="alert alert-danger">
+        <div *ngIf="street.errors.required">
+           Street is required.
+        </div>
+       </div>
+      </label>
+      <br> -->
+      <label>
+        City<input type="text" [formControl]="city">
+        <div *ngIf="city.invalid && (city.dirty ||
+        city.touched)"
+            class="alert alert-danger">
+        <div *ngIf="city.errors.required">
+           City is required.
+        </div>
+       </div>
+      </label>
+      <br>
+      
+      <label>
+        State<select [formControl]="state">
+            <option value="Karnataka">Karnataka</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Kerela">Kerela</option>
+            <option value="Maharastra">Maharastra</option>
+        </select>
+        <!--<input type="text" [formControl]="state">-->
+        <div *ngIf="state.invalid && (state.dirty ||
+        state.touched)"
+            class="alert alert-danger">
+        <div *ngIf="state.errors.required">
+           State is required.
+        </div>
+       </div>
+  
+      </label>
+      <br>
+      <label>
+        Pin Code
+        <input type="number" [formControl]="zip">
+        <div *ngIf="zip.invalid && (zip.dirty ||
+        zip.touched)"
+            class="alert alert-danger">
+        <div *ngIf="zip.errors.required">
+           Zipcode is required.
+        </div>
+       </div>
+      </label>
+      <h3>Personal Details</h3>
+        
+      <label>
+          Email
+          <input type="email" [formControl]="em">
+          <div *ngIf="em.invalid && (em.dirty ||
+          em.touched)"
+              class="alert alert-danger">
+          <div *ngIf="em.errors.required">
+             Email is required.
+          </div>
+         </div>
+        </label>
+      </div>
+      <br>
+      <!-- <label>
+          Age
+          <input type="number" [formControl]="age">
+          <div *ngIf="age.invalid && (age.dirty ||
+          age.touched)"
+              class="alert alert-danger">
+          <div *ngIf="age.errors.required">
+             Age is required.
+          </div>
+         </div>
+        </label> -->
+     <br>
+
+    <div [formGroup]="genderForm" >Gender
+       <input type="radio" [formControl]="gender" value="Male" >Male
+       <input type="radio" [formControl]="gender" value="Female">Female
+       <input type="radio" [formControl]="gender" value="Others">Others
+       <div *ngIf="gender.invalid && (gender.dirty ||
+        gender.touched)"
+            class="alert alert-danger">
+        <div *ngIf="gender.errors.required">
+           Gender is required.
+        </div>
+       </div>
+      </div>
+
+     
+    <button type="submit" class="button_clas" >Create Account</button>
+  </form>
+</div>
+</div>

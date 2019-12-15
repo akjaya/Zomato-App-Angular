@@ -1,0 +1,43 @@
+<div >
+<div >
+    <form  [formGroup]="profileLogin" (ngSubmit)="loginSubmit()">
+        <div>
+        
+        <label >
+        Username
+        <input type="text"class="username" matInput [formControl]="username">
+        <div *ngIf="username.invalid && (username.dirty ||
+        username.touched)"
+            class="alert alert-danger">
+        <div *ngIf="username.errors.required" class="check">
+            User name is required.
+        </div>
+
+        </div>
+        </label>
+    <br>
+    <br>
+    <br>
+        <label >
+        Password
+        <input type="password"class="password" matInput [formControl]="password">
+        <div *ngIf="password.invalid && (password.dirty ||
+        password.touched)"
+            class="alert alert-danger">
+        <div *ngIf="password.errors.required"  class="check">
+            Password is required.
+        </div>
+        </div>
+        </label>
+        </div>
+        <br>
+<br>
+<br>
+
+    <button type="submit"   [disabled]='!profileLogin.valid'mat-button><strong>Submit</strong></button>     
+    <!--<button class ="button_clas" [disabled]='!profileLogin.valid' type="submit">Submut</button>-->
+    </form>
+</div>
+</div>
+
+<strong *ngIf="submitMessage" class="error-message">{{submitMessage}}</strong>

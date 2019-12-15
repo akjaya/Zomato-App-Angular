@@ -1,0 +1,54 @@
+<nav class="navbar navbar-dark bg-dark " >
+    <a class="navbar-brand" href="#"><b>Zomato</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        </ul>
+    </div>
+    <div>
+      <form class="location_entry" [formGroup]="location_entry" (ngSubmit)="locationSubmit()">
+          <input type="text"  matInput [formControl]="location" placeholder="Type the search city" color= "black">
+                <div *ngIf="location.invalid && (location.dirty || location.touched)" class="alert alert-danger">
+          <div *ngIf="location.errors.required">
+              Location is required.
+          </div>
+          </div>
+          <button class="aa btn btn-outline-success my-2 my-sm-0" type="submit"  [disabled]='!location_entry.valid' mat-raised-button color="primary">Search</button> 
+        <button routerLink="login" class="aa btn btn-outline-success my-2 my-sm-0">Log In</button>
+        <button routerLink="signup" class="aa btn btn-outline-success my-2 my-sm-0">Register</button>
+        <!-- <button routerLink="logout" class="aa btn btn-outline-success my-2 my-sm-0">Log Out</button> -->
+      </form>
+    </div>
+  </nav>
+  <div>
+    <div>
+        <mat-card *ngFor = "let entry of resturant_inforarray| paginate:{itemsPerPage: 2, currentPage:p};">
+            
+            
+            <div>
+               <img mat-card-image src="{{entry.image_url}}" alt="Loading for{{entry.name}}">
+            </div>
+
+                 <mat-card-title>{{entry.name}}</mat-card-title>
+    
+            <button mat-icon-button (click)="click_fav(entry.id)" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
+                              <mat-icon>favorite</mat-icon> <b>Add to favorites</b>
+            </button>
+            
+            
+        </mat-card>
+        </div>
+        <pagination-controls (pageChange)="p=$event"></pagination-controls>
+        </div>
+
+
+
+
+

@@ -1,0 +1,71 @@
+{
+  "favourites": [
+    {
+      "id": 18994069,
+      "image_url": "https://b.zmtcdn.com/data/pictures/9/18994069/37f087290dff035e46bf3c07e7d12bca.jpg?output-format=webp",
+      "name": "Toy Beach Club",
+      "cusines": "Continental, European, Italian, Japanese, North Indian",
+      "ratings": "4.9",
+      "loaclity": "Candolim",
+      "timings": "9 AM to 2 AM",
+      "avg_cost": 2500
+    },
+    {
+      "id": 18800810,
+      "image_url": "https://b.zmtcdn.com/data/pictures/0/18800810/1f2b0c524d50cec56f01f8af3142cf59.jpg",
+      "name": "The Black Pearl",
+      "cusines": "North Indian, Continental",
+      "ratings": "4.8",
+      "loaclity": "Sholinganallur",
+      "timings": "12noon – 4:30pm, 6:30pm – 12midnight (Mon-Sun)",
+      "avg_cost": 1500,
+      "lon": 80,
+      "lat": 12
+    },
+    {
+      "id": 130535,
+      "image_url": "https://b.zmtcdn.com/data/res_imagery/130535_RESTAURANT_43c5b253d7e2100dcf7488e7112b0c76.jpg",
+      "name": "The Fisherman's Wharf"
+    },
+    {
+      "id": 16512333,
+      "image_url": "https://b.zmtcdn.com/data/pictures/3/16512333/9802645124fcbc7c1000e75e51fa1925.jpg",
+      "name": "Britto's Bar & Restaurant"
+    },
+    {
+      "id": 19120816,
+      "image_url": "https://b.zmtcdn.com/data/pictures/6/19120816/90550795b039cb583ec6abe0c874b354.jpg",
+      "name": "The Mafia"
+    },
+    {
+      "id": 18664424,
+      "image_url": "https://b.zmtcdn.com/data/pictures/4/18664424/fe55fd4cf1ac57b1eb9ac43be53e09ff.jpg?output-format=webp",
+      "name": "360 Degree - The Revolving Fine Dine Restaurant"
+    },
+    {
+      "id": 130230,
+      "image_url": "https://b.zmtcdn.com/data/res_imagery/130230_RESTAURANT_2b66562beb067b105788550619db372e_c.jpg",
+      "name": "Curlies"
+    },
+    {
+      "id": 308322,
+      "image_url": "https://b.zmtcdn.com/data/pictures/2/308322/b5221a35591a8f709a2cf34e8f4bb86b.jpg",
+      "name": "Hauz Khas Social"
+    },
+    {
+      "id": 18707459,
+      "image_url": "https://b.zmtcdn.com/data/reviews_photos/2db/e8d08c9341d5106813b14e7a433a62db_1538396053.jpg",
+      "name": "Butterfly High"
+    },
+    {
+      "id": 18695968,
+      "image_url": "https://b.zmtcdn.com/data/pictures/8/18695968/576c438f85fdfe8a0017437679a070fb.jpg?output-format=webp",
+      "name": "Highland"
+    },
+    {
+      "id": 18422898,
+      "image_url": "https://b.zmtcdn.com/data/pictures/8/18422898/00b78b92b626c82c3c711d79f1e3188e.jpg?output-format=webp",
+      "name": "Hoot"
+    }
+  ]
+}

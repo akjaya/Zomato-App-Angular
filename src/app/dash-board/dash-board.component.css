@@ -1,0 +1,59 @@
+img {
+    width:30vw;
+    height:20vw;
+    border-radius:30px 30px 30px 30px;
+    border:3px;
+    /* margin:40px; */
+    padding: 10px;
+    margin:auto;
+    margin-right: 0cm;
+}
+.card{
+    padding: 20px;
+    padding-right:0px;
+    background-color: white;
+    margin-top: 80px;
+    border:3px solid lightblue;
+    width:50vw;
+    margin-left: 300px;
+    color:blue;
+}
+.x{
+    background-color: lightblue;
+    border: 1px solid lightblue;
+    color:blue;
+    margin-right: 30px;
+}
+.y{
+    background-color:lightblue;
+    /* border: 1px solid lightblue; */
+    color:blue;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.submit{
+    background-color: lightblue;
+    margin-left: 140px;
+    color:blue;
+}
+.navbar{
+    border-bottom:1px solid blue;
+    box-shadow: blue;
+}
+.form-container{
+    margin-top:40px;
+    padding: 30px;
+    background-color:aliceblue;
+    border:2px solid lightblue;
+    margin-left:280px;
+    margin-right: 30px;
+    border-radius:10px;
+    width:50vw;
+}
+.form-control{
+    margin-left:80px;
+}
+h3{
+    margin-left:80px;
+    color:blue;
+}
