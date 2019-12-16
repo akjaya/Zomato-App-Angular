@@ -10,6 +10,7 @@ import { RouterserviceService } from '../routerservice.service';
   styleUrls: ['./locationresturantion.component.css']
 })
 export class LocationresturantionComponent implements OnInit {
+  flag:boolean=false;
   location_entry: FormGroup;
   location = new FormControl();
   obj : Resturants = new Resturants();
@@ -71,7 +72,7 @@ export class LocationresturantionComponent implements OnInit {
 
 
   locationSubmit() {
-
+    this.flag = true;
     this.zomatoservice.searchloacationName(this.location_entry.value.location).subscribe((data) =>
     {
       this.ngOnInit();

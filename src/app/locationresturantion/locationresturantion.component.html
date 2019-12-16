@@ -51,7 +51,9 @@
  </div> <!-- Ends of jumbotron-->
 
    <!-- Displaying in mat card -->
+<section *ngIf ="flag==true">
    <div class="card">
+      <h2>Favourite Restaurants in Place</h2>
     <div>
    <mat-card *ngFor = "let entry of resturant_inforarray| paginate:{itemsPerPage: 4, currentPage:p};" class="card">
        <div>
@@ -63,8 +65,9 @@
        </button> 
    </mat-card>
    </div>
-    <!-- <pagination-controls  (pageChange)="p=$event"></pagination-controls> -->
+    <pagination-controls  (pageChange)="p=$event"></pagination-controls>
    </div>
+  </section>
     <!-- Displaying in mat card  ends-->
 
  <div class="row">
